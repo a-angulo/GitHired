@@ -1,11 +1,13 @@
 # 💼 GitHired
 
-<p align="center">
-  <img src="assets/demo-preview.jpg" alt="GitHired Demo Preview" width="600" />
-</p>
+---
 
 🔗 **Live Site:** [githired.onrender.com](https://githired.onrender.com)  
+
+---
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+---
 
 ## 📚 Table of Contents
 - 📝 [Description](#-description)
