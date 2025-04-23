@@ -1,32 +1,26 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
 
 const Nav = () => {
-  const currentPage = useLocation().pathname;
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const isActive = (path: string) =>
+    currentPath === path ? 'text-blue-600 font-bold underline' : 'text-black';
 
   return (
-    <nav>
-      <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <Link
-            to="/"
-            className={currentPage === "/" ? "nav-link active" : "nav-link"}
-          >
-            Home
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
-            to="/SavedCandidates"
-            className={
-              currentPage === "/SavedCandidates"
-                ? "nav-link active"
-                : "nav-link"
-            }
-          >
-            Potential Candidates
-          </Link>
-        </li>
-      </ul>
+    <nav className="p-4 border-b border-gray-300">
+      <div className="flex gap-4 justify-center">
+        <Link to="/" className={isActive('/')}>
+          Home
+        </Link>
+        <Link to="/CandidateSearch" className={isActive('/CandidateSearch')}>
+          Candidate Search
+        </Link>
+        <Link to="/SavedCandidates" className={isActive('/SavedCandidates')}>
+          Saved Candidates
+        </Link>
+      </div>
     </nav>
   );
 };

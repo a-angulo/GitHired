@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Candidate } from "../interfaces/Candidate.interface";
+import Candidate from "../interfaces/Candidate.interface";
 import { searchGithubUser, searchGithub } from "../api/API";
-import React from 'react';
+import '../index.css'; // Import the CSS file
+
 
 const CandidateSearch = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
@@ -54,6 +55,9 @@ const CandidateSearch = () => {
 
   const handleAccept = () => {
     const saved: Candidate[] = JSON.parse(localStorage.getItem("savedCandidates") || "[]");
+    if (!saved) {
+      localStorage.setItem("savedCandidates", JSON.stringify([]));
+    }
 
     if (candidate && !saved.find((c) => c.login === candidate.login)) {
       localStorage.setItem("savedCandidates", JSON.stringify([...saved, candidate]));
