@@ -1,30 +1,98 @@
-# 🚀 GitHired! 🔍  
-_“Swipe right on your next star developer.”_
----
+# 💼 GitHired
 
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
----
+<p align="center">
+  <img src="assets/demo-preview.jpg" alt="GitHired Demo Preview" width="600" />
+</p>
 
-## 📚 Table of Contents  
-- [📝 Description](#-description)  
-- [⚙️ Installation](#️-installation)  
-- [🚀 Usage](#-usage)  
-- [💾 Deployment](#-deployment)  
-- [💡 Features](#-features)  
-- [🧠 Future Ideas](#-future-ideas)  
-- [🙌 Credits](#-credits)  
-- [📄 License](#-license)
+🔗 **Live Site:** [githired.onrender.com](https://githired.onrender.com)  
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
----
+## 📚 Table of Contents
+- 📝 [Description](#-description)
+- 💾 [Installation](#-installation)
+- 🚀 [Usage](#-usage)
+- 📡 [Deployment](#-deployment)
+- ✨ [Features](#-features)
+- 🧠 [Future Ideas](#-future-ideas)
+- 🙌 [Credits](#-credits)
+- 📄 [License](#-license)
 
-## 📝 Description  
-**GitHired!** is a TypeScript-powered candidate search tool that lets employers scroll through potential developers using real-time data from the GitHub API. Think of it like Tinder — but for hiring coders. Accept candidates you like, reject the rest, and view your favorites anytime.
+## 📝 Description
+GitHired is a developer candidate search app that uses the GitHub API to showcase real users in a swipe-style interface. You can choose to accept (🟩) or reject (🟥) candidates, and review your saved picks on a dedicated "Potential Candidates" page. It’s built with **React + TypeScript**, styled in custom CSS with mobile-first design, and deployed on **Render**.
 
----
+## 💾 Installation
+Before running locally, make sure you’ve got Node.js installed 👉 [Install Node.js](https://nodejs.org)
 
-## ⚙️ Installation  
+```bash
+git clone https://github.com/a-angulo/GitHired.git
+cd GitHired
+npm install
+```
 
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/your-username/githired.git
-   cd githired
+Create a `.env` file in the root:
+
+```env
+VITE_GITHUB_TOKEN=your_personal_access_token
+```
+
+Then run the dev server:
+
+```bash
+npm run dev
+```
+
+## 🚀 Usage
+- Launches on the Home page, showing GitHub users one at a time  
+- Click 🟩 to accept and save them  
+- Click 🟥 to reject and load the next  
+- Use the nav bar to switch to Potential Candidates  
+- Data is saved with `localStorage` and survives refresh  
+
+## 📡 Deployment
+App is hosted on Render using Node 20
+
+**Build command:**
+```bash
+npm run build
+```
+
+**Start command:**
+```bash
+npm run preview
+```
+
+**Add this to `render.yaml`:**
+```yaml
+build:
+  environment:
+    nodeVersion: 20.11.1
+```
+
+Set `VITE_GITHUB_TOKEN` in your Render environment variables.
+
+## ✨ Features
+- 🔍 Real-time GitHub user fetching  
+- 🟩/🟥 Accept or reject with one click  
+- 💾 Persistent data via localStorage  
+- 📱 Fully mobile-first, responsive layout  
+- 🌒 Maintains clean dark mode  
+- 📊 (Optional) Sorting and filtering logic  
+- 🎨 Hover effects and animated transitions  
+
+## 🧠 Future Ideas
+- 👉 Swipe gesture support for touch  
+- 🏷️ Add notes or labels to saved candidates  
+- 📤 Export saved profiles  
+- 🌐 Advanced GitHub search query support  
+- 🤖 Recommendation engine powered by activity  
+
+## 🙌 Credits
+- Starter provided by edX  
+- GitHub REST API  
+- Built with React, Vite, TypeScript  
+- Styled with custom CSS  
+- README written with ☕️ and determination  
+
+## 📄 License
+Licensed under the MIT License  
+“Swipe right on your next star developer.” — The GitHired Team
