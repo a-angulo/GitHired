@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Candidate } from '../interfaces/Candidate.interface';
-import React from 'react';
 
 const SavedCandidates = () => {
   const [saved, setSaved] = useState<Candidate[]>([]);
@@ -90,7 +89,7 @@ const SavedCandidates = () => {
               <td>{candidate.location || 'N/A'}</td>
               <td>{candidate.email || 'N/A'}</td>
               <td>{candidate.company || 'N/A'}</td>
-              <td>{(candidate as any).bio || 'N/A'}</td>
+              <td>{candidate.bio || 'N/A'}</td>
               <td><button onClick={() => handleReject(idx)}>Reject</button></td>
             </tr>
           ))}

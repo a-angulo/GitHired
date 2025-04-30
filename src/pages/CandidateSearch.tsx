@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Candidate from "../interfaces/Candidate.interface";
+import {Candidate} from "../interfaces/Candidate.interface";
 import { searchGithubUser, searchGithub } from "../api/API";
 import '../index.css'; // Import the CSS file
 

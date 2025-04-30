@@ -1,4 +1,4 @@
-interface Candidate {
+export interface Candidate {
   readonly login: string; // GitHub username
   readonly name: string | null;
   readonly location: string | null;
@@ -9,4 +9,3 @@ interface Candidate {
   readonly bio?: string | null;
 }
 
-export default Candidate;
