@@ -34,8 +34,12 @@ body {
 	background-position: center center;
 	margin: 0;
 	place-items: center;
-	min-width: 320px;
+	width: 100%;
 	min-height: 100vh;
+}
+
+#root{
+	width: 100%;
 }
 
 h1 {
@@ -106,27 +110,24 @@ td {
 
 .nav {
 	display: flex;
-	justify-content: space-evenly;
-	/* padding: 1em 2em; */
-	text-align: center;
-  margin: 0px;
-  padding: 0px;
-}
-
-.nav-item {
-	/* padding: 0 0.5rem; */
+	justify-content: flex-start;
+	padding: 1em 2em;
+	width: 100%;
+  }
+  
+  .nav-item {
+	padding: 0 0.5rem;
 	list-style: none;
-  margin: 0px;
-}
-
-.nav-link {
+  }
+  
+  .nav-link {
 	color: #fff;
 	text-decoration: none;
-}
-
-.active {
-	font-weight: 900;
-}
+  }
+  
+  .active {
+	font-weight: 700;
+  }
 
 .table {
 	width: 80vw;
@@ -135,8 +136,54 @@ td {
   margin: 10px 0;
 }
 
-.header {
-	text-align: center;
-  justify-content: center;
-  display: flex;
+.container {
+	width: 100%;
+}
+
+.card {
+	width: 300px;
+	margin: auto;
+}
+
+.card img {
+	width: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.card-body {
+	padding: 20px;
+	background-color: #1a1a1a;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: #fff;
+	margin-bottom: 10px;
+}
+.card h2 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}	
+
+.card-actions {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.card-actions button {
+	color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: none;
+	font-size: 25px;
+	font-weight: 700;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card-actions button:first-child {
+	background-color: tomato;
+}
+.card-actions button:last-child {
+	background-color: green;
 }

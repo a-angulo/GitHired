@@ -5,17 +5,16 @@ const Nav = () => {
   const currentPath = location.pathname;
 
   const isActive = (path: string) =>
-    currentPath === path ? 'text-blue-600 font-bold underline' : 'text-black';
+    currentPath === path ? 'nav-link active' : 'nav-link';
 
   return (
-    <nav className="p-4 border-b border-gray-300">
-      <div className="flex gap-4 justify-center">
+    <nav className="nav">
+         <div className="nav-item">
         <Link to="/" className={isActive('/')}>
-          Home
-        </Link>
-        <Link to="/CandidateSearch" className={isActive('/CandidateSearch')}>
           Candidate Search
         </Link>
+        </div>
+        <div className="nav-item">
         <Link to="/SavedCandidates" className={isActive('/SavedCandidates')}>
           Saved Candidates
         </Link>

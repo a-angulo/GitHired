@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {Candidate} from "../interfaces/Candidate.interface";
+import { Candidate } from "../interfaces/Candidate.interface";
 import { searchGithubUser, searchGithub } from "../api/API";
 import '../index.css'; // Import the CSS file
 
@@ -79,26 +79,26 @@ const CandidateSearch = () => {
   if (currentIndex === -1 || candidates.length === 0) return <h2>No more candidates to review</h2>;
 
   return (
-    <div style={{ textAlign: "center", padding: "1rem" }}>
-      <h2>{candidate?.name || "No Name Provided"}</h2>
-      <img
-        src={candidate?.avatar_url}
-        alt={candidate?.login}
-        width="100"
-        style={{ borderRadius: "50%", marginBottom: "1rem" }}
-      />
-      <p><strong>Username:</strong> {candidate?.login}</p>
-      <p><strong>Location:</strong> {candidate?.location || "N/A"}</p>
-      <p><strong>Email:</strong> {candidate?.email || "N/A"}</p>
-      <p><strong>Company:</strong> {candidate?.company || "N/A"}</p>
-      <p>
-        <a href={candidate?.html_url} target="_blank" rel="noopener noreferrer">
-          GitHub Profile
-        </a>
-      </p>
-      <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginTop: "1rem" }}>
-        <button onClick={handleNext} style={{ padding: "0.5rem 1rem" }}>❌ Skip</button>
-        <button onClick={handleAccept} style={{ padding: "0.5rem 1rem" }}>✅ Save</button>
+    <div className="container">
+      <h1>Candidate Search</h1>
+      <div className="card">
+
+        <img
+          src={candidate?.avatar_url}
+          alt={candidate?.login}
+        />
+        <div className="card-body">
+          <h2>{candidate?.name}({candidate?.login})</h2>
+          <p>Location: {candidate?.location || "N/A"}</p>
+          <p>Email: <a href={candidate?.html_url} target="_blank" rel="noopener noreferrer">{candidate?.html_url}</a></p>
+          <p>Company: {candidate?.company || "N/A"}</p>
+          <p>Bio: {candidate?.bio || "N/A"}</p>
+        </div>
+
+        <div className="card-actions">
+          <button onClick={handleNext}>-</button>
+          <button onClick={handleAccept}>+</button>
+        </div>
       </div>
     </div>
   );
