@@ -2,7 +2,7 @@
 
 ---
 
-🔗 **Live Site:** [githired.onrender.com](https://githired.onrender.com)  
+🔗 **Live Site:** [githired.onrender.com](https://githired-1.onrender.com/)  
 
 ---
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
